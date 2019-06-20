@@ -1,0 +1,66 @@
+.contact {
+	position: fixed;
+	bottom: 0; right: 0;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,1);
+	width: 175px;
+}
+
+.toggle-box {
+	position: fixed;
+	bottom: 0; right: 0;
+	z-index: 0;
+	height: 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.toggle-open {
+	height: auto;
+}
+
+.title {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 40px;
+	z-index: 99;
+}
+
+.contact-form {
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.contact-form input {
+	font-size: 1.2em;
+	padding: 1em;
+	margin: 1em 0 0 0;
+	height: 48px;
+	width: 85%;
+}
+
+.msg {
+	width: 85%;
+	height: 250px;
+	margin: 2em 0;
+	box-shadow: 0px 0px 4px -2px rgba(0,0,0,1);
+}
+
+.g-recaptcha {
+	margin-bottom: 1em
+}
+
+.submit-btn {
+	margin: 1em 0;
+	height: 48px;
+	width: 85%;
+
+	background-color: #33a3d4;
+	border: none;
+	box-shadow: 0 0px 5px -2px rgba(0,0,0,1);
+}

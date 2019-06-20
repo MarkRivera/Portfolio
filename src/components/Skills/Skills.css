@@ -1,0 +1,97 @@
+.skill-container {
+	display: flex;
+	flex-flow: column;
+	line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+}
+
+.skill-intro {
+	display: flex;
+	margin-bottom: 2em;
+	padding: 0 7.5vw;
+	font-size: 2em;
+	background-color: #33a3d4;
+
+	box-shadow: 0 0px 10px -2px rgba(0,0,0,1);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.skill-intro h1 {
+  color: #fff;
+}
+
+.skill-box {
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 5px -2px rgba(0,0,0,.5);
+	width: 85%;
+	margin: 4em auto;
+}
+
+.skill-title {
+	margin: 1em auto;
+	width: 85%;
+	color: #33a3d4;
+}
+
+.divider {
+	height: 1px;
+	width: 85%;
+	margin: 0 auto 1em auto;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.skills {
+	display: flex;
+	justify-content: space-around;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.tech {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1em 0;
+}
+
+.skill-name {
+	border-bottom: 2px solid #33a3d4;
+}
+
+.Html5 {
+	color: #f16529;
+}
+
+.JSX {
+	color: #61dafb;
+}
+
+.CSS3 {
+	color: #3b9adb;
+}
+
+.Sass {
+	color: #cc6699;
+}
+
+.Bootstrap {
+	color: #5e2c4c;
+}
+
+.Javascript {
+	color: #ffda3e;
+}
+.React {
+	color: #61dafb;
+}
+.Npm {
+	color: #90c53f;
+}
+
+
+@media screen and (max-width: 480px) {
+	.skills {
+		flex-flow: column;
+	}
+}

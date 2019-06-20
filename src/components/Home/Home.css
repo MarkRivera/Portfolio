@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hero {
+	width: 100%;
+	height: 90vh;
+	background-size: cover;
+}
+
+.hero-container {
+	display: flex;
+	flex-flow: column;
+	padding: 10em 1em 0em 1em;
+	color: #fff;
+	height: inherit;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: 'Roboto', sans-serif;
+}
+
+.hero-text {
+	margin: 0 auto;
+	width: 190px;
+	display: flex;
+	flex-flow: column;
+}
+
+.hero-title {
+	margin: 0 auto;
+}
+
+.highlight {
+	display: block;
+	color: #33a3d4;
+	font-size: 1.5em;
+}
+
+.hero-caption {
+	text-align: right;
+	position: relative;
+	right: 0;
+}
+
+.project-intro {
+	display: flex;
+	padding: 0 7.5vw;
+  margin: 2em 0;
+	font-size: 2em;
+	background-color: #33a3d4;
+
+	box-shadow: 0 0px 10px -2px rgba(0,0,0,1);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.project-intro h1 {
+  color: #fff;
+}
+
+@media screen and (min-width: 566px) {
+	.hero-text {
+		width: 100%;
+		font-size: 2em;
+	}
+
+	.hero-caption {
+		margin: 0 auto;
+		font-size: initial;
+	}
+}
+
+@media screen and (min-width: 566px) {
+	.hero-text {
+		margin-top: 2.5em;
+	}
+}
