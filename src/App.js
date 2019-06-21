@@ -15,21 +15,21 @@ class App extends React.Component {
       onHomePage: true,
       projectClicked: false
     };
-    this.changePageStateToTrue = this.changePageStateToTrue.bind(this);
-    this.changePageStateToFalse = this.changePageStateToFalse.bind(this);
+    this.changeResumeStateToTrue = this.changeResumeStateToTrue.bind(this);
+    this.changeResumeStateToFalse = this.changeResumeStateToFalse.bind(this);
     this.changeHomeStateToFalse = this.changeHomeStateToFalse.bind(this);
     this.changeHomeStateToTrue = this.changeHomeStateToTrue.bind(this);
     this.scrollPage = this.scrollPage.bind(this);
     this.projectClicked = this.projectClicked.bind(this);
   };
 
-  changePageStateToTrue(e) {
+  changeResumeStateToTrue(e) {
     this.setState({
       onResumePage: true
     });
   };
 
-  changePageStateToFalse(e) {
+  changeResumeStateToFalse(e) {
     this.setState({
       onResumePage: false
     }, ()=> {
@@ -79,14 +79,14 @@ class App extends React.Component {
 
           <Switch>
             <Route path="/" exact render={(props) => {
-              return <Home pageStateFalse={this.changePageStateToFalse} 
+              return <Home pageStateFalse={this.changeResumeStateToFalse} 
                     scrollPage={this.scrollPage} 
                     resumePageState={this.state.onResumePage}
                     changeHomePageState={this.changeHomeStateToTrue}
                     />
                   }
                 }/>
-            <Route path="/Resume" render={(props) => <Resume  resumePageStateTrue={this.changePageStateToTrue} changeHomePageState={this.changeHomeStateToFalse} />} />
+            <Route path="/Resume" render={(props) => <Resume  resumePageStateTrue={this.changeResumeStateToTrue} changeHomePageState={this.changeHomeStateToFalse} />} />
           </Switch>
         </Router>
         <ContactMe />

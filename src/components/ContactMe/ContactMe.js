@@ -5,9 +5,31 @@ export default class ContactMe extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isToggleOpen: false
+			isToggleOpen: false,
+			value: '',
+			msg: ''
 		};
+
 		this.handleClick = this.handleClick.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+		this.handleMsgChange = this.handleMsgChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(e) {
+		this.setState({
+			value: e.target.value
+		});
+	}
+
+	handleMsgChange(e) {
+		this.setState({
+			msg: e.target.value
+		})
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
 	}
 
 	handleClick(e) {
@@ -33,11 +55,11 @@ export default class ContactMe extends Component {
 		return (
 			<React.Fragment>
 			<div className="toggle-box"> 
-				<form className="contact-form" method="POST">
-					<input type="text" name="email" placeholder="Email"></input>
-					<textarea name="msg" placeholder="Feel free to send me a message!"  className="msg"/>
+				<form className="contact-form" onSubmit={this.handleSubmit}>
+					<input type="text" name="email" placeholder="Email" value={this.state.value} onChange={this.handleChange}></input>
+					<textarea name="msg" placeholder="Feel free to send me a message!"  className="msg" onChange={this.handleMsgChange} value={this.state.msg} />
 					<div className="g-recaptcha" data-sitekey="6LdPxKkUAAAAAKPVRuRTVH2VE3oicvo1f5mahmBr"></div>
-					<button type="submit" className="submit-btn">Send</button>
+					<input type="submit" className="submit-btn" value="Submit" />
 				</form>
 			</div>
 			<section className="contact">

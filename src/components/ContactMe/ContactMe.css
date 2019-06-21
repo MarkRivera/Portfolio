@@ -14,6 +14,7 @@
 	width: 100%;
 	overflow: hidden;
 	background-color: #fff;
+	max-width: 500px;
 }
 
 .toggle-open {
@@ -34,6 +35,7 @@
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+	padding-bottom: 2em;
 }
 
 .contact-form input {
@@ -63,4 +65,36 @@
 	background-color: #33a3d4;
 	border: none;
 	box-shadow: 0 0px 5px -2px rgba(0,0,0,1);
+}
+
+@media screen and (min-width: 566px) {
+
+	.contact-form {
+		height: 75vh;
+	}
+
+	.contact-form input {
+		width: 95%;
+	}
+
+	.msg {
+		width: 95%;
+	}
+
+	.toggle-box {
+		width: 50%;
+	}
+
+}
+
+@media screen and (min-width: 750px) {
+	.contact-form {
+		height: 50vh;
+	}
+
+	.toggle-box {
+		width: 50%;
+		bottom: 2.5em;
+	}
+
 }
