@@ -30,21 +30,20 @@ export default class Home extends Component {
 				link: "https://agitated-wiles-65be6d.netlify.com"
 			},
 			],
-
-			onResumePage: false
 		};
-
-		this.handleLoad = this.handleLoad.bind(this);
 	}
 
 	componentDidMount() {
-		if (this.state.onResumePage) {
-			this.handleLoad();
-		}
+		if (this.props.resumePageState) {
+			this.props.pageStateFalse();
+			this.props.changeHomePageState();		}
 	}
 
-	handleLoad() {
-		console.log('hi');
+	componentDidUpdate(){
+		if (this.props.projectClicked) {
+			this.props.scrollPage();
+		}
+
 	}
 
 	render(){

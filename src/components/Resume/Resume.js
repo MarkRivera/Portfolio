@@ -6,6 +6,11 @@ export default class Resume extends Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		this.props.resumePageStateTrue();
+		this.props.changeHomePageState();
+	}
+
 	render(){
 		return (
 				<main>

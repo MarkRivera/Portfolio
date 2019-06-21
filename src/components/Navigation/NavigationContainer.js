@@ -55,17 +55,18 @@ export default class NavigationContainer extends Component {
 		}
 	}
 
-	scrollPage() {
-		let project = document.querySelector('.project-intro').offsetTop;
-		window.scrollTo(0, project);
-	}
-
 	handleProjectLink(e) {
 		e.persist();
-		let pathName = window.location.pathname;
-		let domain = window.location.hostname;
-		
-		document.querySelector('.Home').click();
+    
+    if(window.location.pathname === '/Resume') {
+    	this.props.projectClicked();
+    }
+
+    else {
+    	if (this.props.onHomePage) {
+    		this.props.scrollPage();
+    	}
+    }
 	}
 
 	render(){
