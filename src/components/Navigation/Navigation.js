@@ -1,14 +1,12 @@
-import React from 'react';
-import './Navigation.css';
+import React from 'react'
+import './Navigation.css'
 
-function Navigation (props) {
-	return (
-		<nav> 
-			<button> 
-				Hi
-			</button> 
-		</nav>
-	);
+function Navigation(props) {
+  return (
+    <nav>
+      <button>Hi</button>
+    </nav>
+  )
 }
 
-export default Navigation;
+export default Navigation

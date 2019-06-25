@@ -29,7 +29,33 @@
 	z-index: 99;
 }
 
+.overlay {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s ease-in; 
+}
+
+.overlay h1 {
+	color: #fff;
+	opacity: 1;
+	z-index: 99;
+}
+
+.overlay-open {
+	visibility: visible;
+	opacity: .90;
+	transition: all .5s ease-in; 
+}
+
 .contact-form {
+	position: relative;
 	font-family: 'Roboto', sans-serif;
 	height: 100vh;
 	display: flex;
@@ -133,10 +159,6 @@
 }
 
 @media screen and (min-width: 750px) {
-	.contact-form {
-		height: 50vh;
-	}
-
 	.toggle-box {
 		width: 50%;
 		bottom: 2.5em;
